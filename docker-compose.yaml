@@ -13,12 +13,12 @@ services:
           timeout: 5s
           retries: 3
 
-#      bot:
-#        build: .
-#        depends_on:
-#          postgres:
-#            condition: service_healthy
-#        env_file:
-#          - .env
-#        restart: unless-stopped
+      bot:
+        build: .
+        depends_on:
+          postgres:
+            condition: service_healthy
+        env_file:
+          - .env
+        restart: unless-stopped
 
